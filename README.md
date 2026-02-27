@@ -57,7 +57,7 @@ La aplicación cuenta con dos módulos principales:
 ## Usuarios de prueba
 
 ### Usuario Agencia
-User: ultragroup@agencia  
+User: ultragroup@agencia.com  
 Pass: ultra123group+
 
 ### Usuario Viajero
