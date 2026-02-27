@@ -1,6 +1,7 @@
 
 import { Box, Divider, Grid, Typography } from "@mui/material"
 import { styled } from '@mui/material/styles';
+import imgHotel from '../../../../../main/Assets/imgHotel.jpg'
 
 
 const CardBox = styled(Box)(
@@ -25,6 +26,25 @@ const CardsHotels =({hotels, choiceHotel})=>{
             {hotels && hotels.map(hotel => (
                 <Grid key={hotel.id} item p={2}>
                     <CardBox onClick={()=>choiceHotel(hotel)}>
+                        <Box display="flex" justifyContent="center" alignItems="center" p={2}>
+                            <Box
+                            sx={{
+                                width: 100,          
+                                height: 100,       
+                                borderRadius: '50%', 
+                                overflow: 'hidden',  
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}
+                            >
+                            <img 
+                                src={imgHotel} 
+                                alt={"hotel" + hotel.id} 
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                            />
+                            </Box>
+                        </Box>
                         <Box display={'flex'} justifyContent="center" alignItems={"center"} p={2}>                            
                             <Typography variant="h3">{hotel.label}</Typography>
                         </Box>

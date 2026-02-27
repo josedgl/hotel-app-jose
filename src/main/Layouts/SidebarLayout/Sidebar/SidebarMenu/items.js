@@ -70,7 +70,7 @@ export const menuViajero = [
       {
         name: 'Reservar',
         icon: CalendarMonthTwoToneIcon,
-        link: '/admin/booking/new',
+        link: '/home',
         items: null
       },
     ]

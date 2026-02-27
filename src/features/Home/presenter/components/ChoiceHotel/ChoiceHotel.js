@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/material/styles';
 import { getTypeRoom } from '../../../../../main/Utils/Lists/roomsTypes';
+import imgRoom from '../../../../../main/Assets/imgRoom.jpg'
 
 import {
     Box,
@@ -128,6 +129,25 @@ export default function ChoiceHotel({ dataHotel, onCloseDialg, saveReserveRoom }
                   dataHotel.rooms.map((item) => (
                     <Grid key={item.id} item xs={12} md={6} lg={4}>
                       <CardBox onClick={() => setChoiceRoom(item)}>
+                        <Box display="flex" justifyContent="center" alignItems="center" p={2}>
+                         <Box
+                            sx={{
+                              width: 100,          
+                              height: 100,       
+                              borderRadius: '50%', 
+                              overflow: 'hidden',  
+                              display: 'flex',
+                              justifyContent: 'center',
+                              alignItems: 'center'
+                            }}
+                          >
+                            <img 
+                              src={imgRoom} 
+                              alt={"room" + item.id} 
+                              style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                            />
+                          </Box>
+                        </Box>
                         <Box display="flex" justifyContent="center" alignItems="center" p={2}>
                           <Typography variant="h3">{item.name}</Typography>
                         </Box>
@@ -392,6 +412,14 @@ export default function ChoiceHotel({ dataHotel, onCloseDialg, saveReserveRoom }
       </DialogContent>
 
       <DialogActions>
+        {!reserveRoom && choiceRoom &&(
+          <Button
+            variant="outlined"
+            onClick={() => setChoiceRoom(null)}
+          >
+            Regresar
+          </Button>
+        )}
         <Button
           autoFocus
           onClick={onCloseDialg}
