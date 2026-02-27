@@ -71,4 +71,4 @@ Pass: viajero123ultra+
 1. Clonar el repositorio:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone [<URL_DEL_REPOSITORIO>](https://github.com/josedgl/hotel-app-jose.git)
