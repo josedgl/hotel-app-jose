@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { ContextProviderComposer } from './main/Contexts/composer';
+import { providers } from '../src/main/Contexts/providers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <ContextProviderComposer contextProviders={providers}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ContextProviderComposer>
   </React.StrictMode>
 );
 
