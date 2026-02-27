@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Hotel App — Prueba Técnica
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web desarrollada para la administración y reserva de hoteles.  
+El proyecto fue construido siguiendo buenas prácticas de arquitectura frontend, separación de responsabilidades y manejo estructurado del estado.
 
-## Available Scripts
+La aplicación cuenta con dos módulos principales:
 
-In the project directory, you can run:
+- Administración de hoteles (perfil agencia)
+- Reserva de hoteles (perfil viajero)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologías utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React (versión: 19.2.4)
+- Node.js (versión: 24.13.1)
+- Material UI (MUI) para diseño de interfaz (versión: 7)
+- React Context API para manejo global de estado
+- Persistencia de datos local (mock API / almacenamiento local)
+- React Testing Library para pruebas unitarias
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Arquitectura y decisiones técnicas
 
-### `npm run build`
+- Separación clara entre UI, lógica y manejo de estado.
+- Uso de Context API para centralizar información global como hoteles, habitaciones y reservas.
+- Persistencia de datos para simular comportamiento de backend.
+- Componentes reutilizables y modulares para facilitar escalabilidad.
+- Formularios controlados con validaciones.
+- Manejo de estados de carga y control básico de errores.
+- Roles diferenciados para agencia y viajero.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Funcionalidades
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Módulo Agencia
+- Crear hoteles
+- Editar hoteles
+- Activar / desactivar hoteles
+- Crear habitaciones asociadas a un hotel
+- Editar habitaciones
+- Activar / desactivar disponibilidad
+- Visualizar reservas por hotel
+- Ver detalle de reservas
 
-### `npm run eject`
+### Módulo Viajero
+- Búsqueda de hoteles por ciudad
+- Visualización de hoteles disponibles
+- Selección de habitaciones
+- Registro de datos del huésped
+- Confirmación de reserva con notificación de éxito
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usuarios de prueba
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Usuario Agencia
+User: ultragroup@agencia  
+Pass: ultra123group+
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Usuario Viajero
+User: usuario@viajero.com  
+Pass: viajero123ultra+
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Instalación y ejecución
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clonar el repositorio:
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone [<URL_DEL_REPOSITORIO>](https://github.com/josedgl/hotel-app-jose.git)
