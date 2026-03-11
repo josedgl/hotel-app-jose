@@ -31,7 +31,7 @@ const HomeViewPage =()=>{
         const copyBooking = [...(bookings ?? [])];
         const newData = {
             ...data,
-            id : bookings.length + 1,
+            id : Date.now(),
         }
         copyBooking.push(newData)
         setActionSnack(true)
